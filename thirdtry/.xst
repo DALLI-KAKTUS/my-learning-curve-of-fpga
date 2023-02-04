@@ -1,0 +1,5 @@
+set -tmpdir "/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/thirdtry/xst/projnav.tmp"
+set -xsthdpdir "/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/thirdtry/xst"
+elaborate
+-ifn .prj
+-ifmt mixed

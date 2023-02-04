@@ -1,0 +1,34 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/thirdtry/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/thirdtry/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "debounce.v" in library work
+ERROR:HDLCompilers:26 - "debounce.v" line 22 expecting 'EOF', found 'reg'
+Analysis of file <".prj"> failed.
+--> 
+
+
+Total memory usage is 454344 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

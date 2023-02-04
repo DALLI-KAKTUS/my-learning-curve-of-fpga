@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/secondtry/vga_test.ncd
+OUTFILE=/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/secondtry/vga_test.bit
+FAMILY=Spartan3E
+PART=xc3s250e-5cp132
+WORKINGDIR=/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/secondtry
+LICENSE=WebPack
+USER_INFO=212619868_0_0_230

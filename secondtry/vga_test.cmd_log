@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/secondtry/vga_test.xst" -ofn "/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/secondtry/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 

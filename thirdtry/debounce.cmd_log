@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/thirdtry/debounce.xst" -ofn "/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/thirdtry/debounce.syr" 
+xst -intstyle ise -ifn "/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/thirdtry/debounce.xst" -ofn "/home/kaktus/Belgeler/pasazevklerim/gunluk/Elektronik/yazilim/Lojik/FPGA/ogrenmek_icin_yaptigim_projeler/thirdtry/debounce.syr" 

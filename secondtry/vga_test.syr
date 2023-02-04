@@ -1,0 +1,446 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.39 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.39 secs
+ 
+--> 
+Reading design: vga_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vga_test.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vga_test"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-cp132
+
+---- Source Options
+Top Module Name                    : vga_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "vga_sync.v" in library work
+Compiling verilog file "vga_test.v" in library work
+Module <vga_sync> compiled
+Module <vga_test> compiled
+No errors in compilation
+Analysis of file <"vga_test.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <vga_test> in library <work>.
+
+Analyzing hierarchy for module <vga_sync> in library <work> with parameters.
+	END_H_RETRACE = "00000000000000000000001011101111"
+	END_V_RETRACE = "00000000000000000000001000000010"
+	H_DISPLAY = "00000000000000000000001010000000"
+	H_L_BORDER = "00000000000000000000000000110000"
+	H_MAX = "00000000000000000000001100011111"
+	H_RETRACE = "00000000000000000000000001100000"
+	H_R_BORDER = "00000000000000000000000000010000"
+	START_H_RETRACE = "00000000000000000000001010010000"
+	START_V_RETRACE = "00000000000000000000001000000001"
+	V_B_BORDER = "00000000000000000000000000100001"
+	V_DISPLAY = "00000000000000000000000111100000"
+	V_MAX = "00000000000000000000001000001100"
+	V_RETRACE = "00000000000000000000000000000010"
+	V_T_BORDER = "00000000000000000000000000001010"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <vga_test>.
+Module <vga_test> is correct for synthesis.
+ 
+Analyzing module <vga_sync> in library <work>.
+	END_H_RETRACE = 32'sb00000000000000000000001011101111
+	END_V_RETRACE = 32'sb00000000000000000000001000000010
+	H_DISPLAY = 32'sb00000000000000000000001010000000
+	H_L_BORDER = 32'sb00000000000000000000000000110000
+	H_MAX = 32'sb00000000000000000000001100011111
+	H_RETRACE = 32'sb00000000000000000000000001100000
+	H_R_BORDER = 32'sb00000000000000000000000000010000
+	START_H_RETRACE = 32'sb00000000000000000000001010010000
+	START_V_RETRACE = 32'sb00000000000000000000001000000001
+	V_B_BORDER = 32'sb00000000000000000000000000100001
+	V_DISPLAY = 32'sb00000000000000000000000111100000
+	V_MAX = 32'sb00000000000000000000001000001100
+	V_RETRACE = 32'sb00000000000000000000000000000010
+	V_T_BORDER = 32'sb00000000000000000000000000001010
+Module <vga_sync> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vga_sync>.
+    Related source file is "vga_sync.v".
+    Found 10-bit adder for signal <h_count_next$addsub0000> created at line 84.
+    Found 10-bit register for signal <h_count_reg>.
+    Found 11-bit comparator greatequal for signal <hsync_next$cmp_ge0000> created at line 95.
+    Found 11-bit comparator lessequal for signal <hsync_next$cmp_le0000> created at line 95.
+    Found 1-bit register for signal <hsync_reg>.
+    Found 1-bit register for signal <pixel_reg>.
+    Found 10-bit adder for signal <v_count_next$addsub0000> created at line 88.
+    Found 10-bit register for signal <v_count_reg>.
+    Found 11-bit comparator less for signal <video_on$cmp_lt0000> created at line 103.
+    Found 10-bit comparator less for signal <video_on$cmp_lt0001> created at line 103.
+    Found 11-bit comparator greatequal for signal <vsync_next$cmp_ge0000> created at line 99.
+    Found 11-bit comparator lessequal for signal <vsync_next$cmp_le0000> created at line 99.
+    Found 1-bit register for signal <vsync_reg>.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <vga_sync> synthesized.
+
+
+Synthesizing Unit <vga_test>.
+    Related source file is "vga_test.v".
+    Found 8-bit register for signal <rgb_reg>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <vga_test> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 6
+ 1-bit register                                        : 3
+ 10-bit register                                       : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 6
+ 10-bit comparator less                                : 1
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 1
+ 11-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+# Comparators                                          : 6
+ 10-bit comparator less                                : 1
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 1
+ 11-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <vga_test> ...
+
+Optimizing unit <vga_sync> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block vga_test, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : vga_test.ngr
+Top Level Output File Name         : vga_test
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 103
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 18
+#      LUT2                        : 2
+#      LUT3                        : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 35
+#      LUT4_D                      : 3
+#      MUXCY                       : 18
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 31
+#      FDC                         : 30
+#      FDR                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 9
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250ecp132-5 
+
+ Number of Slices:                       34  out of   2448     1%  
+ Number of Slice Flip Flops:             23  out of   4896     0%  
+ Number of 4 input LUTs:                 63  out of   4896     1%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of     92    21%  
+    IOB Flip Flops:                       8
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 31    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 30    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.712ns (Maximum Frequency: 175.059MHz)
+   Minimum input arrival time before clock: 1.731ns
+   Maximum output required time after clock: 6.627ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.712ns (frequency: 175.059MHz)
+  Total number of paths / destination ports: 577 / 23
+-------------------------------------------------------------------------
+Delay:               5.712ns (Levels of Logic = 4)
+  Source:            vga_sync_unit/h_count_reg_2 (FF)
+  Destination:       vga_sync_unit/v_count_reg_8 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: vga_sync_unit/h_count_reg_2 to vga_sync_unit/v_count_reg_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.603  vga_sync_unit/h_count_reg_2 (vga_sync_unit/h_count_reg_2)
+     LUT4:I0->O            2   0.612   0.383  vga_sync_unit/h_count_next_cmp_eq000012 (vga_sync_unit/h_count_next_cmp_eq000012)
+     LUT4:I3->O           11   0.612   0.796  vga_sync_unit/h_count_next_cmp_eq000024 (vga_sync_unit/h_count_next_cmp_eq0000)
+     LUT4_D:I3->O          9   0.612   0.700  vga_sync_unit/v_count_next<0>2 (vga_sync_unit/N4)
+     LUT4:I3->O            1   0.612   0.000  vga_sync_unit/v_count_next<8>1 (vga_sync_unit/v_count_next<8>)
+     FDC:D                     0.268          vga_sync_unit/v_count_reg_8
+    ----------------------------------------
+    Total                      5.712ns (3.230ns logic, 2.482ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            sw<0> (PAD)
+  Destination:       rgb_reg_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<0> to rgb_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  sw_0_IBUF (sw_0_IBUF)
+     FDC:D                     0.268          rgb_reg_0
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 74 / 10
+-------------------------------------------------------------------------
+Offset:              6.627ns (Levels of Logic = 3)
+  Source:            vga_sync_unit/v_count_reg_6 (FF)
+  Destination:       rgb<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: vga_sync_unit/v_count_reg_6 to rgb<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.514   0.651  vga_sync_unit/v_count_reg_6 (vga_sync_unit/v_count_reg_6)
+     LUT4:I0->O            8   0.612   0.712  vga_sync_unit/video_on21 (vga_sync_unit/video_on21)
+     LUT4:I1->O            1   0.612   0.357  rgb<7>1 (rgb_7_OBUF)
+     OBUF:I->O                 3.169          rgb_7_OBUF (rgb<7>)
+    ----------------------------------------
+    Total                      6.627ns (4.907ns logic, 1.720ns route)
+                                       (74.0% logic, 26.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 41.00 secs
+Total CPU time to Xst completion: 37.59 secs
+ 
+--> 
+
+
+Total memory usage is 496332 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,2 @@
+verilog work "vga_sync.v"
+verilog work "vga_test.v"

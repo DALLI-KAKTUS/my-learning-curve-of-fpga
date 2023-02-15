@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/fourthtry/pwm_test_isim_beh.exe" -prj "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/fourthtry/pwm_test_beh.prj" "work.pwm_test" "work.glbl" 

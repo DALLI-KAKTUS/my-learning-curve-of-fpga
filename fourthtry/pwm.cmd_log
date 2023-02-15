@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/fourthtry/pwm.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/fourthtry/pwm.syr" 

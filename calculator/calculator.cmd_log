@@ -1,0 +1,31 @@
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc calculatorImplementation.ucf -p xc7a100t-csg324-3 calculator.ngc calculator.ngd  
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc calculatorImplementation.ucf -p xc7a100t-csg324-3 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o calculator_map.ncd calculator.ngd calculator.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc calculatorImplementation.ucf -p xc7a100t-csg324-3 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o calculator_map.ncd calculator.ngd calculator.pcf 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc calculatorImplementation.ucf -p xc3s250e-cp132-5 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o calculator_map.ncd calculator.ngd calculator.pcf 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc calculatorImplementation.ucf -p xc3s250e-cp132-5 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o calculator_map.ncd calculator.ngd calculator.pcf 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc calculatorImplementation.ucf -p xc3s250e-cp132-5 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o calculator_map.ncd calculator.ngd calculator.pcf 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc calculatorImplementation.ucf -p xc3s250e-cp132-5 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o calculator_map.ncd calculator.ngd calculator.pcf 
+par -w -intstyle ise -ol high -t 1 calculator_map.ncd calculator.ncd calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml calculator.twx calculator.ncd -o calculator.twr calculator.pcf -ucf calculatorImplementation.ucf 
+bitgen -intstyle ise -f calculator.ut calculator.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc calculatorImplementation.ucf -p xc3s250e-cp132-5 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o calculator_map.ncd calculator.ngd calculator.pcf 
+par -w -intstyle ise -ol high -t 1 calculator_map.ncd calculator.ncd calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml calculator.twx calculator.ncd -o calculator.twr calculator.pcf -ucf calculatorImplementation.ucf 
+bitgen -intstyle ise -f calculator.ut calculator.ncd 

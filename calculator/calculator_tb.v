@@ -4,15 +4,15 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   02:49:05 02/06/2023
-// Design Name:   pwm
-// Module Name:   /mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/fourthtry/pwm_test.v
-// Project Name:  fourthtry
+// Create Date:   02:29:47 02/19/2023
+// Design Name:   calculator
+// Module Name:   /mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/calculator_tb.v
+// Project Name:  calculator
 // Target Device:  
 // Tool versions:  
 // Description: 
 //
-// Verilog Test Fixture created by ISE for module: pwm
+// Verilog Test Fixture created by ISE for module: calculator
 //
 // Dependencies:
 // 
@@ -22,42 +22,40 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module pwm_test;
+module calculator_tb;
 
 	// Inputs
 	reg clk;
-	reg [7:0] duty;
+	reg [3:0] number;
 
 	// Outputs
-	wire out;
+	wire [7:0] sseg_o;
+	wire [3:0] anodes;
 
 	// Instantiate the Unit Under Test (UUT)
-	pwm uut (
+	calculator uut (
 		.clk(clk), 
-		.duty(duty), 
-		.out(out)
+		.number(number), 
+		.sseg_o(sseg_o), 
+		.anodes(anodes)
 	);
 
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		duty = 0;
-
+		number = 0;
+		
+		
 		// Wait 100 ns for global reset to finish
 		#100;
-		duty = 124;
-		#100000
-		duty = 50;
-		#100000;
-		duty = 240;
-		#100000;
-        
+      number = 4'b0001;
+		#100;
+		number = 4'b1000;
 		// Add stimulus here
-		
+
 	end
-	always begin
-   		#10 clk = !clk;
+   always begin
+	#10 clk = !clk;
 	end
-	
 endmodule
 

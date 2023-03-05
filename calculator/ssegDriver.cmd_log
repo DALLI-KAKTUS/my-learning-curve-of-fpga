@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/ssegDriver.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/ssegDriver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ssegDriverImplement.ucf -p xc3s250e-cp132-5 ssegDriver.ngc ssegDriver.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ssegDriverImplement.ucf -p xc3s250e-cp132-5 ssegDriver.ngc ssegDriver.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ssegDriver_map.ncd ssegDriver.ngd ssegDriver.pcf 
+par -w -intstyle ise -ol high -t 1 ssegDriver_map.ncd ssegDriver.ncd ssegDriver.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ssegDriver.twx ssegDriver.ncd -o ssegDriver.twr ssegDriver.pcf -ucf ssegDriverImplement.ucf 
+bitgen -intstyle ise -f ssegDriver.ut ssegDriver.ncd 
+xst -intstyle ise -ifn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/ssegDriver.xst" -ofn "/mnt/c/Users/berke/Desktop/my-learning-curve-of-fpga/calculator/ssegDriver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ssegDriverImplement.ucf -p xc3s250e-cp132-5 ssegDriver.ngc ssegDriver.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ssegDriver_map.ncd ssegDriver.ngd ssegDriver.pcf 
+par -w -intstyle ise -ol high -t 1 ssegDriver_map.ncd ssegDriver.ncd ssegDriver.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ssegDriver.twx ssegDriver.ncd -o ssegDriver.twr ssegDriver.pcf -ucf ssegDriverImplement.ucf 
+bitgen -intstyle ise -f ssegDriver.ut ssegDriver.ncd 

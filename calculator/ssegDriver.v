@@ -18,24 +18,25 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module calculator(
+module ssegDriver(
 	//saat tanmla
 	input clk,
 	//gelen say tanmla
-	input [3:0] number,
+	input [9:0] number,
 	//7 segment kts tanmla
 	output [7:0] sseg_o,
-	output [3:0] anodes
+	output [3:0] anodes_o
     );
 	//denemek iin anodes'u 1 yap
-	assign anodes = 4'b1110;
+	reg anodes = 4'b1110;
+	assign anodes_o = anodes;
 	//her segment iin bir bitlik register
 	reg [7:0] sseg = 8'b11111111;
 	//saatin her yuksek seviyesinde kontrol et
 	always @(posedge clk)
 		begin
-	//binary sayy 7 segmente ceviren case yapsi
-	//basys2 kart iin ktlar terse evrilmi
+	//binary sayiyi 7 segmente ceviren case yapsi
+	//basys2 karti icin cktilar terse cevrilmis
 			case (number)
 				4'b0000: sseg <= 8'b11000000; //00000011;
 				4'b0001: sseg <= 8'b11111001; //10011111;

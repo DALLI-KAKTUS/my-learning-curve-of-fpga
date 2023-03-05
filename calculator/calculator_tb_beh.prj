@@ -1,3 +1,0 @@
-verilog work "ssegDriver.v"
-verilog work "calculator_tb.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

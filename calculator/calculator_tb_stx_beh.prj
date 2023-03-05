@@ -1,3 +1,0 @@
-verilog isim_temp "ssegDriver.v"
-verilog isim_temp "calculator_tb.v"
-verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

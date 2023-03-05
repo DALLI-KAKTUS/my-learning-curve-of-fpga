@@ -1,0 +1,26 @@
+
+//saat girdisi tanmlama
+NET "clk" LOC = "b8"; 
+//7 segment pinlerini tanmla
+NET "sseg_o<0>" LOC = "L14";
+NET "sseg_o<1>" LOC = "H12";
+NET "sseg_o<2>" LOC = "N14";
+NET "sseg_o<3>" LOC = "N11";
+NET "sseg_o<4>" LOC = "P12";
+NET "sseg_o<5>" LOC = "L13";
+NET "sseg_o<6>" LOC = "M12";
+NET "sseg_o<7>" LOC = "N13";
+//anot pinlerini tanmla
+NET "anodes_o<3>" LOC = "K14";
+NET "anodes_o<2>" LOC = "M13";
+NET "anodes_o<1>" LOC = "J12";
+NET "anodes_o<0>" LOC = "F12";
+//switch pinlerini tanmla
+NET "number<7>" LOC = "N3";
+NET "number<6>" LOC = "E2";
+NET "number<5>" LOC = "F3";
+NET "number<4>" LOC = "G3";
+NET "number<3>" LOC = "B4";
+NET "number<2>" LOC = "K3";
+NET "number<1>" LOC = "L3";
+NET "number<0>" LOC = "P11";

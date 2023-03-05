@@ -5,10 +5,40 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_sseg_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">41</arg>: Size mismatch between case item and case selector.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">sseg_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">calculator</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">42</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">43</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">44</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">45</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">47</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">48</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="old" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">49</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="2725" delta="new" >&quot;<arg fmt="%s" index="1">ssegDriver.v</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Size mismatch between case item and case selector.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">anodes</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">sseg_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">ssegDriver</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 </messages>
